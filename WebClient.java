@@ -4,7 +4,7 @@ import java.net.Socket;
 public class WebClient {
     public static void main(String[] args) {
         try{
-            Socket socket = new Socket("localhost", 8081);
+            Socket socket = new Socket("localhost", 8080);
             File recvFile = new File("client_recv.txt");
             File sendFile = new File("client_send.txt");
             FileInputStream fis = new FileInputStream(sendFile);
@@ -17,7 +17,7 @@ public class WebClient {
                 output.write(ch);
             }
 
-            output.write(0); // 전송의 끝을 알리기 위해 0을 송신
+//            output.write(0); // 전송의 끝을 알리기 위해 0을 송신
             InputStream input = socket.getInputStream();
             while ((ch = input.read()) != -1) {
                 fos.write(ch);
