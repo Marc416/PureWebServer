@@ -1,4 +1,4 @@
-GET /towerpmc.png HTTP/1.1
+GET /index.html HTTP/1.1
 Host: 127.0.0.1:8080
 Sec-Fetch-Site: none
 Connection: keep-alive

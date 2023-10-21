@@ -4,7 +4,7 @@ import java.net.Socket;
 public class WebClient {
     public static void main(String[] args) {
         try{
-            Socket socket = new Socket("localhost", 8080);
+            Socket socket = new Socket("localhost", 8001);
             File recvFile = new File("client_recv.txt");
             File sendFile = new File("client_send.txt");
             FileInputStream fis = new FileInputStream(sendFile);
